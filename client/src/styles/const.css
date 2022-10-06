@@ -1,0 +1,54 @@
+/* GOOGLE FONTS => Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* VARIABLES */
+:root {
+    --color-navbar: #F6F6F6;
+    --color-text-navbar: #616161;
+
+    --primary: #99CC33;
+    --green: #1DC9A1;
+    --dark: #313131;
+    --secondary: #E8E9E9;
+    --disabled: #CED8E2;
+
+    --color-text-footer: #7B797C;
+
+    /*Font Poppins*/
+    --Font-Poppins: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--Font-Poppins);
+    font-size: 16px;
+}
+
+main.index {
+    background: #FFFFFF;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    user-select: none;
+}
+
+.btn-reset {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.mx-w {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
