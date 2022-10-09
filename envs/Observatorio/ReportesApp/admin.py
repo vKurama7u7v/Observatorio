@@ -14,6 +14,6 @@ class ReporteResource(resources.ModelResource):
 class ReporteAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     search_fields = ["title"]
     list_display = ("id", "title", "status", "createdAt")
-    resources_class = Reportes
+    resources_class = ReporteResource
 
 admin.site.register(Reportes, ReporteAdmin)

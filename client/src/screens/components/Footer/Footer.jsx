@@ -52,44 +52,44 @@ export default function Footer() {
             </div>
 
             <ul className="box">
-              <li className="link__name">Sección 1</li>
+              <li className="link__name">Explorar</li>
               <li>
-                <Link to="">Editar 1</Link>
+                <Link to="">Inicio</Link>
               </li>
               <li>
-                <Link to="">Editar 2</Link>
+                <Link to="">Nosotros</Link>
               </li>
               <li>
-                <Link to="">Editar 3</Link>
+                <Link to="">Reportes</Link>
               </li>
               <li>
-                <Link to="">Editar 4</Link>
+                <Link to="">Noticias</Link>
               </li>
               <li>
-                <Link to="">Editar 5</Link>
-              </li>
-            </ul>
-
-            <ul className="box">
-              <li className="link__name">Sección 2</li>
-              <li>
-                <Link to="">Editar 1</Link>
-              </li>
-              <li>
-                <Link to="">Editar 2</Link>
-              </li>
-              <li>
-                <Link to="">Editar 3</Link>
-              </li>
-              <li>
-                <Link to="">Editar 4</Link>
-              </li>
-              <li>
-                <Link to="">Editar 5</Link>
+                <Link to="">Plataforma de Datos</Link>
               </li>
             </ul>
 
             <ul className="box">
+              <li className="link__name">Ayuda y Asistencia</li>
+              <li>
+                <Link to="">Contactanos</Link>
+              </li>
+              <li>
+                <Link to="">Atención a Víctimas</Link>
+              </li>
+              <li>
+                <Link to="">Preguntas Frecuentes</Link>
+              </li>
+              <li>
+                <Link to="">Condiciones</Link>
+              </li>
+              <li>
+                <Link to="">Política de Privacidad</Link>
+              </li>
+            </ul>
+
+            {/* <ul className="box">
               <li className="link__name">Sección 3</li>
               <li>
                 <Link to="">Editar 1</Link>
@@ -106,7 +106,7 @@ export default function Footer() {
               <li>
                 <Link to="">Editar 5</Link>
               </li>
-            </ul>
+            </ul> */}
 
             <ul className="box">
               <li className="link__name">Social</li>

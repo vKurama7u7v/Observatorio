@@ -1,6 +1,8 @@
 import { lazy } from "react";
 
 const Index = lazy(() => import("../screens/app/Index/Index.jsx"));
+const About = lazy(() => import("../screens/app/About/About.jsx"));
+const Reportes = lazy(() => import("../screens/app/Reportes/Reportes.jsx"));
 
 const Error404 = lazy(() =>
   import("../screens/components/Errors/PageNotFound.jsx")
@@ -8,6 +10,8 @@ const Error404 = lazy(() =>
 
 const routes = [
   { path: "/index", component: Index, exact: true },
+  { path: "/nosotros", component: About, exact: true },
+  { path: "/reportes", component: Reportes, exact: true },
   { component: Error404 },
 ];
 

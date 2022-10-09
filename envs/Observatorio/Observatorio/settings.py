@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+import datetime
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -37,13 +38,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # LIBRERIAS
     'corsheaders',
-    'import_export',
-    'rest_framework',
     'drf_yasg',
     'tinymce',
-    'RestApiApp',
-    'ReportesApp',
+    'import_export',
+    'rest_framework',
+    'rest_framework_simplejwt',
+
+    # APPS
+    'RestApiApp.apps.RestapiappConfig',
+    'ReportesApp.apps.ReportesappConfig',
+    'NoticiasApp.apps.NoticiasappConfig',
+    'UsersApp.apps.UsersappConfig',
 ]
 
 MIDDLEWARE = [
@@ -112,6 +120,18 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+# => Simple JWT
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': datetime.timedelta(minutes=60),
+    'REFRESH_TOKEN_LIFETIME': datetime.timedelta(days=7)
+}
+
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
@@ -131,6 +151,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = './static/'
+
+AUTH_USER_MODEL = 'UsersApp.Profile'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
