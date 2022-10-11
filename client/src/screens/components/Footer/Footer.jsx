@@ -111,29 +111,13 @@ export default function Footer() {
             <ul className="box">
               <li className="link__name">Social</li>
               <li>
-                <Link to="">
-                  <i className="bx bxl-facebook"></i> Facebook
-                </Link>
-              </li>
-              <li>
-                <Link to="">
+                <a
+                  href={"https://twitter.com/observatoriotma"}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <i className="bx bxl-twitter"></i> Twitter
-                </Link>
-              </li>
-              <li>
-                <Link to="">
-                  <i className="bx bxl-instagram"></i> Instagram
-                </Link>
-              </li>
-              <li>
-                <Link to="">
-                  <i className="bx bxl-youtube"></i> YouTube
-                </Link>
-              </li>
-              <li>
-                <Link to="">
-                  <i className="bx bxl-tiktok"></i> TikTok
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

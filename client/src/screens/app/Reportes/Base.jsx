@@ -4,7 +4,7 @@ import Component from "./Sections/ListContent/ListContent.jsx";
 export default function Base() {
   return (
     <>
-      <Component route={"reportes"} listType={1} nPorPagina={1} />
+      <Component route={"reportes"} listType={1} nPorPagina={2} />
     </>
   );
 }

@@ -15,7 +15,7 @@ export default function AboutTop() {
             </div>
           </div>
           <div className="right">
-            <h1>¿Quienes Somos?</h1>
+            <h1>¿Quiénes Somos?</h1>
             <p>
               Somos una organización encargada de recopilar, analizar,
               estructurar y difundir reportes estadísticos de los temas que más

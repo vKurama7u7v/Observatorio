@@ -27,7 +27,7 @@ export const setDateFormat = (date) => {
     "Julio",
     "Agosto",
     "Septiembre",
-    "Octtubre",
+    "Octubre",
     "Noviembre",
     "Diciembre",
   ];

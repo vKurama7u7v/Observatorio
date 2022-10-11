@@ -4,12 +4,12 @@ import { map } from "lodash";
 import logo_1 from "../../../../../assets/logos/socios_activos/1.jpg";
 import logo_2 from "../../../../../assets/logos/socios_activos/2.jpg";
 import logo_3 from "../../../../../assets/logos/socios_activos/3.jpg";
-import logo_4 from "../../../../../assets/logos/socios_activos/4.jpg";
-import logo_5 from "../../../../../assets/logos/socios_activos/5.jpg";
-import logo_6 from "../../../../../assets/logos/socios_activos/6.jpg";
+// import logo_4 from "../../../../../assets/logos/socios_activos/4.jpg";
+import logo_4 from "../../../../../assets/logos/socios_activos/5.jpg";
+import logo_5 from "../../../../../assets/logos/socios_activos/6.jpg";
 
 export default function Socios() {
-  const logos = [logo_1, logo_2, logo_3, logo_4, logo_5, logo_6];
+  const logos = [logo_1, logo_2, logo_3, logo_4, logo_5];
   return (
     <>
       <section className="socios mx-w">
