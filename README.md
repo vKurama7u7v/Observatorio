@@ -1,8 +1,8 @@
-# Cliente
+# Cliente => /client
 
 React JS v18.2.0
 
-# Administrador
+# Administrador => /envs/Observatorio
 
 Django v4.1.1
 
