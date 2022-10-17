@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import ListType1 from "./ListType1/ListType1.jsx";
 import Pagination from "./Pagination/Pagination.jsx";
+import Filters from "./Filters/FilterSection.jsx";
 
 import Loading from "../../../../components/Loading/Loading.jsx";
 import Error from "../../../../components/Errors/Error.jsx";
@@ -11,7 +12,16 @@ import process from "../../../../../tools/config.tools.json";
 import "./list-content.styles.css";
 
 export default function ListContent(props) {
-  const { listType, route, nPorPagina } = props;
+  const {
+    listType,
+    route,
+    nPorPagina,
+    title,
+    sectionBuscador,
+    sectionFiltros,
+    sectionCategorias,
+    sectionRecientes,
+  } = props;
 
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState(null);
@@ -51,12 +61,14 @@ export default function ListContent(props) {
           ) : (
             <div className="left">No hay nd</div>
           )}
-          <div className="right">
-            <div className="left-section search">buscador</div>
-            <div className="left-section filtros">filtros</div>
-            <div className="left-section categorias">categorias</div>
-            <div className="left-section recientes">recientes</div>
-          </div>
+
+          <Filters
+            title={title}
+            sectionBuscador={sectionBuscador}
+            sectionFiltros={sectionFiltros}
+            sectionCategorias={sectionCategorias}
+            sectionRecientes={sectionRecientes}
+          />
         </div>
 
         {!data ? null : (

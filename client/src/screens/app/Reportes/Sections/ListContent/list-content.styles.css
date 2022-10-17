@@ -8,6 +8,7 @@ section.list-content {
 
 section.list-content .wrapper {
     display: grid;
+    grid-auto-rows: min-content;
     grid-template-columns: 2fr 1fr;
     gap: var(--gap-grid);
 }
@@ -17,11 +18,152 @@ section.list-content .wrapper .right {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     color: #fff;
     padding: 25px;
+    height: min-content;
+}
+
+section.list-content .wrapper .right .left-section {
+    padding-bottom: 2em;
+    width: 100%;
+}
+
+section.list-content .wrapper .right .left-section:nth-last-of-type(1) {
+    padding-bottom: 0;
+}
+
+
+section.list-content .wrapper .right .left-section h3.left-title span {
+    color: var(--primary);
+}
+
+section.list-content .wrapper .right .left-section h3.left-title::before {
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 100px;
+    bottom: 0;
+    background: var(--primary);
+}
+
+section.list-content .wrapper .right .search form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+section.list-content .wrapper .right .search button {
+    width: 45px;
+    height: 45px;
+    background: var(--primary);
+    color: var(--dark);
+    font-size: 18px;
+}
+
+section.list-content .wrapper .right .search button:hover {
+    opacity: .9;
+}
+
+section.list-content .wrapper .right .search input {
+    height: 45px;
+    width: calc(100% - 45px);
+    background: rgb(240, 240, 240);
+    padding: 0 1em;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+section.list-content .wrapper .right .categorias .buttons-wrapper,
+section.list-content .wrapper .right .filtros .buttons-wrapper {
+    display: flex;
+    gap: .75em;
+    flex-wrap: wrap;
+}
+
+section.list-content .wrapper .right .categorias button,
+section.list-content .wrapper .right .filtros button {
+    background: rgb(219, 219, 219, .3);
+    text-transform: uppercase;
+    padding: .5em;
+    color: #fff;
+    font-weight: 700;
+}
+
+section.list-content .wrapper .right .categorias button:hover,
+section.list-content .wrapper .right .filtros button:hover {
+    background: var(--primary);
+    color: var(--dark);
+}
+
+section.list-content .wrapper .right .left-section h3.left-title {
+    color: #fff;
+    font-size: 24px;
+    line-height: 130%;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    position: relative;
+    padding-bottom: .5em;
+    margin-bottom: .75em;
+}
+
+section.list-content .wrapper .right .recientes .news-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25em;
+}
+
+section.list-content .wrapper .right .recientes .news-wrapper a.new-item {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    gap: .75em;
+    color: #fff;
+}
+
+section.list-content .wrapper .right .recientes .news-wrapper a.new-item .thumbnail {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+section.list-content .wrapper .right .recientes .news-wrapper a.new-item .thumbnail img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+section.list-content .wrapper .right .recientes .news-wrapper a.new-item .description {
+    position: relative;
+}
+
+section.list-content .wrapper .right .recientes .news-wrapper a.new-item h3 {
+    font-size: 16px;
+    line-height: 150%;
+    text-transform: uppercase;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+section.list-content .wrapper .right .recientes .news-wrapper a.new-item:hover h3 {
+    color: var(--primary);
+}
+
+section.list-content .wrapper .right .recientes .news-wrapper a.new-item span {
+    position: absolute;
+    bottom: 0;
+    opacity: .7;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 section.list-content .wrapper .list-content-type-1 {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    height: min-content;
+    grid-auto-rows: min-content;
     gap: var(--gap-grid);
 }
 
@@ -73,7 +215,7 @@ section.list-content .wrapper .list-content-type-1 .item .content h3 {
     text-transform: uppercase;
     text-align: justify;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -156,6 +298,8 @@ section.list-content .pagination button:hover {
     }
 
     section.list-content .wrapper .list-content-type-1 {
+        display: grid;
+        grid-auto-rows: min-content;
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -174,8 +318,8 @@ section.list-content .pagination button:hover {
 
     section.list-content .wrapper .list-content-type-1 .item .content h3 {
         font-size: 18px;
-        -webkit-line-clamp: 2;
-        color: var(--dark);
+        -webkit-line-clamp: 3;
+        /* color: var(--dark); */
     }
 
     section.list-content .wrapper .list-content-type-1 .item .content p {
@@ -206,7 +350,7 @@ section.list-content .pagination button:hover {
 
 @media screen and (max-width: 900px) {
     section.list-content .wrapper {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
     }
 
     section.list-content .wrapper .right {

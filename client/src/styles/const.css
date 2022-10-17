@@ -47,6 +47,14 @@ a {
     transition: all 0.3s ease-in-out;
 }
 
+.input-reset {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: var(--Font-Poppins);
+    font-size: 15px;
+}
+
 .mx-w {
     width: 100%;
     max-width: 1200px;
