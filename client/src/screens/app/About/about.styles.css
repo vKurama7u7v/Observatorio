@@ -33,7 +33,7 @@ section.about-1 .wrapper .left .cont_img .overlay {
 
 section.about-1 .wrapper .left .cont_img img {
     object-fit: cover;
-    object-position: center;
+    object-position: bottom;
     height: 100%;
     width: 100%;
 }

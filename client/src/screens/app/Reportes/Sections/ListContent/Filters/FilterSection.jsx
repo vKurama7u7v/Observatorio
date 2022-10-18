@@ -11,6 +11,7 @@ export default function FilterSection({
   sectionFiltros,
   sectionCategorias,
   sectionRecientes,
+  data,
 }) {
   return (
     <>
@@ -21,7 +22,7 @@ export default function FilterSection({
 
         {sectionCategorias ? <Categories title={title} /> : null}
 
-        {sectionRecientes ? <NewPosts title={title} /> : null}
+        {sectionRecientes ? <NewPosts title={title} data={data} /> : null}
       </div>
     </>
   );

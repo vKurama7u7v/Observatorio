@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./reportes.styles.css";
+import imgBanner from "../../../assets/img/2114.png";
 
 import Navbar from "../../components/Navbar/Navbar.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
@@ -13,7 +13,9 @@ export default function Reportes() {
       <main className="">
         <Base
           imgBanner={
-            "https://i.picsum.photos/id/1036/900/400.jpg?hmac=-J8HWH1fEmW3OMmInQ5yWX3BIEU5Yte8oh_w_ezlQYc"
+            imgBanner
+              ? imgBanner
+              : "https://i.picsum.photos/id/1036/900/400.jpg?hmac=-J8HWH1fEmW3OMmInQ5yWX3BIEU5Yte8oh_w_ezlQYc"
           }
           title={"Reportes"}
           text={
@@ -24,7 +26,7 @@ export default function Reportes() {
           nPorPagina={2}
           sectionBuscador={true}
           sectionFiltros={true}
-          sectionCategorias={true}
+          sectionCategorias={false}
           sectionRecientes={true}
         />
       </main>

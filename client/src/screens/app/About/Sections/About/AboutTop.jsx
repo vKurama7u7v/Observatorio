@@ -1,4 +1,5 @@
 import React from "react";
+import img from "../../../../../assets/img/2116.png";
 
 export default function AboutTop() {
   return (
@@ -9,7 +10,11 @@ export default function AboutTop() {
             <div className="cont_img">
               <div className="overlay"></div>
               <img
-                src="https://i.picsum.photos/id/1036/900/400.jpg?hmac=-J8HWH1fEmW3OMmInQ5yWX3BIEU5Yte8oh_w_ezlQYc"
+                src={
+                  img
+                    ? img
+                    : "https://i.picsum.photos/id/1036/900/400.jpg?hmac=-J8HWH1fEmW3OMmInQ5yWX3BIEU5Yte8oh_w_ezlQYc"
+                }
                 alt=""
               />
             </div>

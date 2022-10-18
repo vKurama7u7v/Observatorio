@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import ListType1 from "./ListType1/ListType1.jsx";
+import ListType2 from "./ListType2/ListType2.jsx";
 import Pagination from "./Pagination/Pagination.jsx";
 import Filters from "./Filters/FilterSection.jsx";
 
@@ -56,7 +57,7 @@ export default function ListContent(props) {
             listType === 1 ? (
               <ListType1 data={data} pagina={pagina} porPagina={porPagina} />
             ) : (
-              <div>tipo2</div>
+              <ListType2 data={data} pagina={pagina} porPagina={porPagina} />
             )
           ) : (
             <div className="left">No hay nd</div>
@@ -68,6 +69,7 @@ export default function ListContent(props) {
             sectionFiltros={sectionFiltros}
             sectionCategorias={sectionCategorias}
             sectionRecientes={sectionRecientes}
+            data={data}
           />
         </div>
 

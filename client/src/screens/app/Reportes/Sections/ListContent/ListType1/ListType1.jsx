@@ -1,7 +1,5 @@
 import React from "react";
-
 import Item from "./Item.jsx";
-import Pagination from "../Pagination/Pagination.jsx";
 
 export default function ListType1({ data, pagina, porPagina }) {
   return (

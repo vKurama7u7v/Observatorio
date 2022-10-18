@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { map } from "lodash";
 import { Link } from "react-router-dom";
 
 import "./navbar.styles.css";
@@ -7,6 +8,16 @@ import Logo from "../../../assets/logos/Logotipo_OCTMA.svg";
 export default function Navbar() {
   const [showSearchInput, setShowSearchInput] = useState(false);
   const [showNavbar, setShowNavbar] = useState(false);
+
+  const routesNavbar = [
+    { name: "¿Quiénes Somos?", route: "/nosotros" },
+    { name: "Plataforma de Datos", route: "" },
+    { name: "Reportes", route: "/reportes" },
+    { name: "Publicaciónes", route: "/noticias" },
+    { name: "En Medios", route: "/noticias" },
+    { name: "Contacto", route: "" },
+    { name: "Atención a victimas", route: "" },
+  ];
 
   const onShowSearchInput = () => {
     if (showSearchInput) {
@@ -38,32 +49,13 @@ export default function Navbar() {
           <div className="nav__content">
             <div className="nav__menu">
               <ul className="nav__list">
-                <li className="nav__item">
-                  <Link className="nav__link">¿Quienes Somos?</Link>
-                </li>
-                {/* <li className="nav__item">
-                  <Link className="nav__link">
-                    Red Nacional de Observatorios
-                  </Link>
-                </li> */}
-                <li className="nav__item">
-                  <Link className="nav__link">Plataforma de Datos</Link>
-                </li>
-                <li className="nav__item">
-                  <Link className="nav__link">Incidencia</Link>
-                </li>
-                <li className="nav__item">
-                  <Link className="nav__link">Publicaciones</Link>
-                </li>
-                <li className="nav__item">
-                  <Link className="nav__link">En Medios</Link>
-                </li>
-                <li className="nav__item">
-                  <Link className="nav__link">Contacto</Link>
-                </li>
-                <li className="nav__item">
-                  <Link className="nav__link">Atención a víctimas</Link>
-                </li>
+                {map(routesNavbar, (item, index) => (
+                  <li className="nav__item">
+                    <Link className="nav__link" to={item.route}>
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
 
                 <li className="nav__item">
                   <form
