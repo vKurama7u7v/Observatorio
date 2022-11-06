@@ -3,13 +3,17 @@ from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 # Views
-from RestApiApp.api.views import UserMeView, UserApiViewSet, UserRegisterView, ReporteApiViewSet, NoticiasApiViewSet
+from RestApiApp.api.views import UserMeView, UserApiViewSet, UserRegisterView, ReporteApiViewSet, NoticiasApiViewSet, CategoriasNoticiasApiViewSet
 
 
 # * ===== ROUTER REPORTES ===== *
 router_reporte = DefaultRouter()
 router_reporte.register(prefix='reportes', basename='reportes', viewset=ReporteApiViewSet)
 
+
+# * ===== ROUTER CATEGORIAS NOTICIAS ===== *
+router_catNoticias = DefaultRouter()
+router_catNoticias.register(prefix='categorias_noticias', basename='categorias_noticias', viewset=CategoriasNoticiasApiViewSet)
 
 # * ===== ROUTER NOTICIAS ===== *
 router_noticias = DefaultRouter()

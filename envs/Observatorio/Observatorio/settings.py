@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     # APPS
     'RestApiApp.apps.RestapiappConfig',
     'ReportesApp.apps.ReportesappConfig',
-    'NoticiasApp.apps.NoticiasappConfig',
+    'EnMediosApp.apps.EnmediosappConfig',
     'UsersApp.apps.UsersappConfig',
 ]
 

@@ -14,7 +14,7 @@ export default function Item({ data }) {
 
         <div className="content">
           <div className="info">
-            <span className="category">Categoría</span>
+            <span className="category">{data.category}</span>
             <span className="date">{setDateFormat(data.createdAt)}</span>
           </div>
           <div className="description">

@@ -19,7 +19,7 @@ from django.urls import path, include
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 
-from RestApiApp.api.router import router_reporte, router_user, router_noticias
+from RestApiApp.api.router import router_reporte, router_user, router_noticias, router_catNoticias
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -41,5 +41,6 @@ urlpatterns = [
     path('api/', include(router_user.urls)),
     path('api/', include(router_reporte.urls)),
     path('api/', include(router_noticias.urls)),
+    path('api/', include(router_catNoticias.urls)),
     path('api/', include("RestApiApp.api.router")),
 ]

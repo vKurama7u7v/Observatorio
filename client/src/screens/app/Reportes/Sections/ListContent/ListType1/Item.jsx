@@ -17,7 +17,7 @@ export default function Item({ data }) {
           <p>{data.description}</p>
           <div className="bottom">
             <div className="options">
-              <Link className="btn-reset btn">Ver Más</Link>
+              <Link to={`/reportes/${data.id}`} className="btn-reset btn">Ver Más</Link>
               <Link className="btn-reset btn">Descargar</Link>
             </div>
             <span className="date">{setDateFormat(data.createdAt)}</span>

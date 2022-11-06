@@ -3,7 +3,7 @@ from rest_framework import serializers
 
 # Models
 from ReportesApp.models import Reportes
-from NoticiasApp.models import Noticias
+from EnMediosApp.models import Noticias, Categorias
 from UsersApp.models import Profile
 
 # Los serializers controlan las peticiones
@@ -60,6 +60,7 @@ class ReporteSerializer(ModelSerializer):
             'id',
             'title',
             'description',
+            'content',
             'url',
             'thumbnail',
             'status',
@@ -67,14 +68,24 @@ class ReporteSerializer(ModelSerializer):
         ]
 
 
-# * ===== SERIALIZER REPORTES ===== *
+# * ===== SERIALIZER CATEGORIAS NOTICIAS ===== *
+class CategoriasNoticiasSerializer(ModelSerializer):
+    class Meta:
+        model = Categorias
+        fields = ['id', 'name', 'createdAt']
+
+
+# * ===== SERIALIZER NOTICIAS ===== *
 class NoticiasSerializer(ModelSerializer):
+    category = serializers.CharField(source='category.name', read_only=True)
+
     class Meta:
         model = Noticias
         fields = [
             'id',
             'title',
             'description',
+            'category',
             'content',
             'thumbnail',
             'status',

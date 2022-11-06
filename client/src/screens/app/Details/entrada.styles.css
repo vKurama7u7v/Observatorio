@@ -1,0 +1,109 @@
+main.details-content {
+    background: #F0F0F0;
+    padding: 3em 0;
+    font: var(--Font-Poppins);
+}
+
+main.details-content section.content {
+    background: #fff;
+    padding: 2em;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+main.details-content section.content .html-content {
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    color: var(--dark);
+    font-family: var(--Font-Poppins);
+    line-height: 170%;
+}
+
+main.details-content section.content .html-content img {
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+    max-height: 400px;
+    /* margin-top: 1.5em; */
+}
+
+main.details-content section.content .html-content h1,
+main.details-content section.content .html-content h2,
+main.details-content section.content .html-content h3,
+main.details-content section.content .html-content h4,
+main.details-content section.content .html-content h5 {
+    padding-bottom: .5em;
+}
+
+main.details-content section.content .html-content p {
+    padding-bottom: 1em;
+}
+
+main.details-content section.content .header-content h1 {
+    text-transform: uppercase;
+    color: var(--primary);
+    font-size: 42px;
+    line-height: 130%;
+    text-align: justify;
+    padding-bottom: .25em;
+}
+
+main.details-content section.content .header-content .details-content {
+    display: flex;
+    align-items: center;
+    gap: .25em;
+    /* justify-content: space-between; */
+}
+
+main.details-content section.content .header-content .details-content .categoria {
+    background: none;
+    border: 3px solid var(--primary);
+    text-transform: uppercase;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 5px;
+}
+
+main.details-content section.content .header-content .details-content .circle {
+    background: #b1b1b1;
+    width: 7px;
+    height: 7px;
+    border-radius: 500px;
+}
+
+main.details-content section.content .header-content .details-content .date {
+    color: #b1b1b1;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+main.details-content section.content .header-line {
+    height: 3px;
+    width: 100%;
+    background: #b1b1b1;
+    margin: 2em 0;
+}
+
+@media screen and (max-width:900px) {
+    main.details-content {
+        padding: 1em;
+    }
+
+    main.details-content section.content {
+        padding: 1em;
+    }
+
+    main.details-content section.content .html-content img {
+        max-height: 300px;
+    }
+
+    main.details-content section.content .header-content h1 {
+        font-size: 32px;
+    }
+
+    main.details-content section.content .header-line {
+        margin: 1em 0;
+    }
+}

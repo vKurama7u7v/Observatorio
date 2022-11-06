@@ -10,11 +10,11 @@ from django.contrib.auth.hashers import make_password
 from RestApiApp.api.permissions import IsAdminOrReadOnly
 
 # Serializers
-from RestApiApp.api.serializers import UserSerializer, UserUpdateSerializer, UserRegisterSerializer, ReporteSerializer, NoticiasSerializer
+from RestApiApp.api.serializers import UserSerializer, UserUpdateSerializer, UserRegisterSerializer, ReporteSerializer, NoticiasSerializer, CategoriasNoticiasSerializer
 
 # Models
 from ReportesApp.models import Reportes
-from NoticiasApp.models import Noticias
+from EnMediosApp.models import Noticias, Categorias as CategoriasNoticias
 from UsersApp.models import Profile
 
 
@@ -78,7 +78,16 @@ class ReporteApiViewSet(ModelViewSet):
     ordering = ['-createdAt']
 
 
-# * ===== VIEWS REPORTES ===== *
+# * ===== VIEWS CATEGORIAS NOTICIAS ===== *
+class CategoriasNoticiasApiViewSet(ModelViewSet):
+    permission_classes = [IsAdminOrReadOnly]
+    serializer_class = CategoriasNoticiasSerializer
+    queryset = CategoriasNoticias.objects.all()
+    filter_backends = [OrderingFilter, SearchFilter]
+    ordering = ['-createdAt']
+
+
+# * ===== VIEWS NOTICIAS ===== *
 class NoticiasApiViewSet(ModelViewSet):
     permission_classes = [IsAdminOrReadOnly]
     serializer_class = NoticiasSerializer

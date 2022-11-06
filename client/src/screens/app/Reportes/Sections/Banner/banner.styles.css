@@ -79,4 +79,8 @@ section.banner-reportes .content p {
         width: 80%;
         height: calc(350px - 80px);
     }
+
+    section.banner-reportes .content h1 {
+        font-size: 32px;
+    }
 }
